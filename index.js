@@ -15,6 +15,7 @@ app.use(koaBodyparse());
 router.post("/", function(ctx) {
     if(LineBotSDK.validateSignature(ctx.request.body, channelSecret)){
         ctx.status = 200;
+        ctx.request.body.events.map(MessageHandler);
     }else{
         ctx.status = 401;
         ctx.body = "Authorize failed.";
@@ -24,3 +25,7 @@ router.post("/", function(ctx) {
 app.use(router.routes());
 
 const server = app.listen(porcess.env.PORT || 8080);
+
+async function MessageHandler(event){
+    console.log(event);
+}
