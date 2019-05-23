@@ -29,7 +29,7 @@ router.post("/", function(ctx) {
 
 app.use(router.routes());
 
-const server = app.listen(porcess.env.PORT || 8080);
+const server = app.listen(process.env.PORT || 8080);
 
 async function MessageHandler(event){
     console.log(event);
