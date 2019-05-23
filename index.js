@@ -5,7 +5,12 @@ const koaBodyparse = require("koa-bodyparser");
 const koaRouter = require("koa-router");
 
 const channelSecret = process.env.channelSecret;
-const lineAPI = new LineBotSDK.LineBotApi(process.env.channelAccessToken);
+const channelAccessToken = process.env.channelAccessToken;
+
+const lineAPI  = new LinebotSDK.Client({
+    "channelSecret": channelSecret,
+    "channelAccessToken": channelAccessToken
+});
 
 const app = new  koa();
 const router = new koaRouter();
