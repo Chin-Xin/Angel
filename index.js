@@ -18,7 +18,7 @@ const router = new koaRouter();
 app.use(koaBodyparse());
 
 router.post("/", function(ctx) {
-    if(LineBotSDK.validateSignature(ctx.request.rawBody, channelSecret, ctx.request.headers['x-line-signature'])){
+    if(LinebotSDK.validateSignature(ctx.request.rawBody, channelSecret, ctx.request.headers['x-line-signature'])){
         ctx.status = 200;
         ctx.request.body.events.map(MessageHandler);
     }else{
