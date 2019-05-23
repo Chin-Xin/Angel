@@ -1,0 +1,25 @@
+{
+  "name": "thr523",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chin-Xin/Angel.git"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chin-Xin/Angel/issues"
+  },
+  "homepage": "https://github.com/Chin-Xin/Angel#readme",
+  "dependencies": {
+    "@line/bot-sdk": "^6.7.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  }
+}
